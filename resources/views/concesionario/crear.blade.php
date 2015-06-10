@@ -2,7 +2,7 @@
 @section('content')
 
 
-
+                        {!!Form ::open(['url'=>'concesionario'])!!} 
                         {!!Form ::open(['url'=>'concesionario'])!!} 
                        <div class="form-group">
                            
