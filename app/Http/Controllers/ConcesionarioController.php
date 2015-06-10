@@ -65,7 +65,7 @@ class ConcesionarioController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show()
 	{
             $concesionario= tmp_concesionario::all(); //tiene que ir deley esto para que se pueda listar aqui se selecciona los datos de la tabla
             return view('concesionario.listar',compact('concesionario'));
@@ -117,10 +117,12 @@ class ConcesionarioController extends Controller {
 	 */
 	public function destroy($id)
 	{
-	   $concesionario=  tmp_concesionario::find($id);
+	   $concesionario=tmp_concesionario::find($id);
            $concesionario->delete();
            $mensaje='Eliminado Correctamente';
            return view('concesionario.index')->with('mensajes',$mensaje);
+           
+            
 	}
        
 

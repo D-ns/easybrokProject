@@ -5,12 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>e@sybrok</title>
         <!-- BOOTSTRAP STYLES-->
-
         <link href="assets/css/bootstrap.css" rel="stylesheet" />
-        <!-- FONTAWESOME ICONS STYLES-->
         <link href="assets/css/font-awesome.css" rel="stylesheet" />
-        <!--CUSTOM STYLES-->
         <link href="assets/css/style.css" rel="stylesheet" />
+        
+        
+        <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="../assets/css/font-awesome.css" rel="stylesheet" />
+        <link href="../assets/css/style.css" rel="stylesheet" />
+        
+        <!-- Para Modificar -->
+        
+        <link href="../../assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+        <link href="../../assets/css/style.css" rel="stylesheet" />
+
 
         <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,10 +27,6 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-
-
-
-
 
     </head>
     <body>
@@ -136,7 +141,7 @@
                     <ul class="nav" id="main-menu">
                         <li>
                             <div class="user-img-div">
-                                <img src="assets/img/user.jpg" class="img-circle" />
+                                <img src="../assets/img/user.jpg" class="img-circle" />
                             </div>
                         </li>
                         <li><a  href="#"> <strong> Andrea Choto </strong></a></li>
@@ -166,14 +171,16 @@
 
                                         </ul>
                                         <ul class="nav nav-second-level">
+                                            
                                             <li>
-                                                <a href="#">Concesionario<span class="fa arrow"></span></a>
-                                                <ul class="nav nav-third-level">
-                                                    <li><a href="crearconcesionario"> 1. Ingreso</a></li>
-                                                    <li><a href="listconcesionario"> 2. Listar</a></li>
-
-                                                </ul>
+                                                <a href="{{url('/cargos/list')}}">Cargos<span class="fa arrow"></span></a>
                                             </li>
+                                            <li>
+                                                <a href="{{url('/concesionario/show')}}">Concesionarios<span class="fa arrow"></span></a>
+                                            </li>
+                                        </ul>
+                                        <ul class="nav nav-second-level">
+                                           
                                         </ul>
 
                                 </li>
@@ -186,16 +193,10 @@
             </nav>
             <!-- /. SIDEBAR MENU (navbar-side) CONTAINNER -->
             <!-- CONTAINNER -->
-           <div id="page-wrapper" class="page-wrapper-cls"> <!-- PAGE WRAPPER  -->
-              
-                        <ul>
-                            <li><a href="create">Crear</a></li>
-                            <li><a href="listar">Editar</a></li>
-                            <br>
-                        </ul>
-              
+            <div id="page-wrapper" class="page-wrapper-cls"> <!-- PAGE WRAPPER  -->
+
                 @yield('content')
-               
+
             </div> <!-- /. PAGE INNER  -->
         </div> <!-- /. PAGE WRAPPER  -->
         </div>
