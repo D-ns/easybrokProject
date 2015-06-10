@@ -6,9 +6,9 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Información Usuario</div>
 
-                {{$cargo->NOMBRE}}
+                <!--{{$cargo->NOMBRE}}
                 {!!Form ::model($cargo,['method'=>'PATCH','action'=>['CargosController@update',$cargo->id] ])!!} 
-                <!--                        <div class="form-group">
+                                        <div class="form-group">
                                             {!! Form:: label('id','ID:')!!}
                                             {!! Form:: text('usuario',null,['class'=>'form-control'])!!}
                                         </div>-->
@@ -16,21 +16,21 @@
 
                 <div class="form-group">
                     {!! Form:: label('nombre','Nombre:')!!}
-                    {!! Form:: text('NOMBRE',null,['class'=>'form-control'])!!}
+                    {!! $cargo->NOMBRE !!}
                 </div>
 
                 <div class="form-group">
                     {!! Form:: label('creacion','Creacion:')!!}
-                    {!! Form:: text('CREACION',null,['class'=>'form-control'])!!}
+                    {!! $cargo->CREACION!!}
                 </div>
 
                 <div class="form-group">
-                    {!! Form:: label('usuario','Uusario Creador:')!!}
-                    {!! Form:: text('USUARIOCREACION',null,['class'=>'form-control'])!!}
+                    {!! Form:: label('usuario','Usuario Creador:')!!}
+                    {!! $cargo->USUARIOCREACION!!}
                 </div>
                 <div class="form-group">
                     {!! Form:: label('estado','Estado Cargo:')!!}
-                    {!! Form:: text('ESTADO',null,['class'=>'form-control'])!!}
+                    {!! $cargo->ESTADO!!}
                 </div>
 
                 {!! Form:: close()!!}

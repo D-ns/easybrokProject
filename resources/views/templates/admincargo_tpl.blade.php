@@ -141,7 +141,7 @@
                     <ul class="nav" id="main-menu">
                         <li>
                             <div class="user-img-div">
-                                <img src="../assets/img/user.jpg" class="img-circle" />
+                                <img src="{{url('assets/img/user.jpg')}}" class="img-circle" />
                             </div>
                         </li>
                         <li><a  href="#"> <strong> Andrea Choto </strong></a></li>

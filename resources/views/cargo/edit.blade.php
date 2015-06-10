@@ -6,8 +6,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Editar Cargos</div>
 
-                 {{$cargo->NOMBRE}}
-                {!!Form ::model($cargo,['method'=>'PATCH','action'=>['CargosController@update',$cargo->id] ])!!} 
+               {!!Form ::model($cargo,['method'=>'PATCH','action'=>['CargosController@update',$cargo->id] ])!!} 
                 <!--                        <div class="form-group">
                                             {!! Form:: label('id','ID:')!!}
                                             {!! Form:: text('usuario',null,['class'=>'form-control'])!!}

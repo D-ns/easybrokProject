@@ -16,8 +16,8 @@
                             <td>{{$cargo->USUARIOCREACION}}</td> 
                             <td>{{$cargo->ESTADO}}</td>
                             <td>{{$cargo->id}}</td>
-                            <td> <a href="../cargos/{{$cargo->id}}/edit" class="btn btn-warning"> Editar</a>                  </td>
-                            <td> <a href="../cargos/{{$cargo->id}}/view" class="btn btn-warning"> Visualizar</a></td>
+                            <td> <a href="../cargos/edit/{{$cargo->id}}" class="btn btn-warning"> Editar</a>                  </td>
+                            <td> <a href="../cargos/view/{{$cargo->id}}" class="btn btn-warning"> Visualizar</a></td>
                             <td>
                                 {!!Form ::model($cargos,['method'=>'DELETE','route'=>['cargos.destroy',$cargo->id] ])!!} 
                                 {!! Form:: submit('Eliminar',['class'=>'btn btn-warning form-control'])!!}
