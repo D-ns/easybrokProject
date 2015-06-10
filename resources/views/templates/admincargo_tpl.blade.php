@@ -174,19 +174,12 @@
                                             <li>
                                                 <a href="{{url('/cargos/list')}}">Cargos<span class="fa arrow"></span></a>
                                             </li>
+                                            <li>
+                                                <a href="{{url('/concesionario/list')}}">Concesionarios<span class="fa arrow"></span></a>
+                                            </li>
                                         </ul>
                                         <ul class="nav nav-second-level">
-                                            <li>
-                                                <a href="#">Concesionario<span class="fa arrow"></span></a>
-                                                <ul class="nav nav-third-level">
-                                                    <li><a href="create"> 1. Ingreso</a></li>
-                                                    <li><a href="listar"> 2. Listar</a></li>
-                                                    <li><a href="concesionario/show"> 3. Modificar</a></li>
-                                                    <li><a href="#"> 4. Eliminar</a></li>
-
-                                                </ul>
-
-                                            </li>
+                                            
                                         </ul>
 
                                 </li>
