@@ -1,4 +1,4 @@
-@extends('templates.admin_tpl')
+@extends('templates.adminconcesionario_tpl')
 @section('content')
 
 
@@ -34,9 +34,15 @@
                         </div>
                         
                         
-                        <div class="form-group">
+                          <div class="form-group">
                             {!! Form:: submit('guardar',['class'=>'btn btn-primary form-control'])!!}
                         </div>
+                        
+                        <div class="form-group">
+                        {!!link_to('concesionario/index','Cancelar')!!}    
+                        
+                        
+                        </div >
                         {!! Form:: close()!!}
                     
 @endsection
