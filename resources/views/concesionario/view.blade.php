@@ -29,7 +29,7 @@
                     {!! Form:: text('USUARIOCREACION',null,['class'=>'form-control'])!!}
                 </div>
                 <div class="form-group">
-                    {!! Form:: label('estado','Estado Cargo:')!!}
+                    {!! Form:: label('estado','Estado Concesionario:')!!}
                     {!! Form:: text('ESTADO',null,['class'=>'form-control'])!!}
                 </div>
 
