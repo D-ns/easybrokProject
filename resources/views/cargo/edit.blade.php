@@ -15,25 +15,25 @@
 
                 <div class="form-group">
                     {!! Form:: label('nombre','Nombre:')!!}
-                    {!! Form:: text('NOMBRE',null,['class'=>'form-control'])!!}
+                    {!! Form:: text('NOMBRE')!!}
                 </div>
 
                 <div class="form-group">
                     {!! Form:: label('creacion','Creacion:')!!}
-                    {!! Form:: text('CREACION',null,['class'=>'form-control'])!!}
+                    {!! Form:: text('created_at')!!}
                 </div>
 
                 <div class="form-group">
                     {!! Form:: label('usuario','Uusario Creador:')!!}
-                    {!! Form:: text('USUARIOCREACION',null,['class'=>'form-control'])!!}
+                    {!! Form:: text('USUARIOCREACION')!!}
                 </div>
                 <div class="form-group">
                     {!! Form:: label('estado','Estado Cargo:')!!}
-                    {!! Form:: text('ESTADO',null,['class'=>'form-control'])!!}
+                    {!! Form:: text('ESTADO')!!}
                 </div>
 
                 <div class="form-group">
-                    {!! Form:: submit('Modificar',['class'=>'btn btn-primary form-control'])!!}
+                    {!! Form:: submit('Modificar')!!}
                 </div>
                 {!! Form:: close()!!}
 

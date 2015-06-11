@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Información Usuario</div>
+                <div class="panel-heading">Información Cargos</div>
 
                 <!--{{$cargo->NOMBRE}}
                 {!!Form ::model($cargo,['method'=>'PATCH','action'=>['CargosController@update',$cargo->id] ])!!} 
@@ -21,7 +21,7 @@
 
                 <div class="form-group">
                     {!! Form:: label('creacion','Creacion:')!!}
-                    {!! $cargo->CREACION!!}
+                    {!! $cargo->created_at!!}
                 </div>
 
                 <div class="form-group">

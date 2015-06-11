@@ -8,14 +8,14 @@
         <link href="assets/css/bootstrap.css" rel="stylesheet" />
         <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <link href="assets/css/style.css" rel="stylesheet" />
-        
-        
+
+
         <link href="../assets/css/bootstrap.css" rel="stylesheet" />
         <link href="../assets/css/font-awesome.css" rel="stylesheet" />
         <link href="../assets/css/style.css" rel="stylesheet" />
-        
+
         <!-- Para Modificar -->
-        
+
         <link href="../../assets/css/bootstrap.css" rel="stylesheet" />
         <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
         <link href="../../assets/css/style.css" rel="stylesheet" />
@@ -179,9 +179,8 @@
                                             </li>
                                         </ul>
                                         <ul class="nav nav-second-level">
-                                            
-                                        </ul>
 
+                                        </ul>
                                 </li>
                             </ul>
                         </li>
@@ -194,23 +193,25 @@
             <!-- CONTAINNER -->
             <div id="page-wrapper" class="page-wrapper-cls"> <!-- PAGE WRAPPER  -->
 
-                @yield('content')
-
-            </div> <!-- /. PAGE INNER  -->
-        </div> <!-- /. PAGE WRAPPER  -->
-        </div>
-        <!-- /. WRAPPER  -->
-        <footer > &copy; 2015 <a href="http://www.citytech.ec/" target="_blank">Citytech</a>
-        </footer>
-        <!-- /. FOOTER  -->
-        <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-        <!-- JQUERY SCRIPTS -->
-        <script src="assets/js/jquery-1.11.1.js"></script>
-        <!-- BOOTSTRAP SCRIPTS -->
-        <script src="assets/js/bootstrap.js"></script>
-        <!-- METISMENU SCRIPTS -->
-        <script src="assets/js/jquery.metisMenu.js"></script>
-        <!-- CUSTOM SCRIPTS -->
-        <script src="assets/js/custom.js"></script>
-    </body>
-</html>
+                <div class="text-center" style=" background: wheat">Administración Cargos </div>
+                <br>
+                    <br>    
+                        @yield('content')
+                        </div> <!-- /. PAGE INNER  -->
+                        </div> <!-- /. PAGE WRAPPER  -->
+                        </div>
+                        <!-- /. WRAPPER  -->
+                        <footer > &copy; 2015 <a href="http://www.citytech.ec/" target="_blank">Citytech</a>
+                        </footer>
+                        <!-- /. FOOTER  -->
+                        <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+                        <!-- JQUERY SCRIPTS -->
+                        <script src="assets/js/jquery-1.11.1.js"></script>
+                        <!-- BOOTSTRAP SCRIPTS -->
+                        <script src="assets/js/bootstrap.js"></script>
+                        <!-- METISMENU SCRIPTS -->
+                        <script src="assets/js/jquery.metisMenu.js"></script>
+                        <!-- CUSTOM SCRIPTS -->
+                        <script src="assets/js/custom.js"></script>
+                        </body>
+                        </html>

@@ -6,6 +6,6 @@ class Tmp_cargo extends Model {
 
     
    protected $table = 'tmp_cargo'; 
-   protected $fillable=['id','NOMBRE','CREACION','USUARIOCREACION','MODIFICACION','USUARIOMODIFICACION','ESTADO'];
+   protected $fillable=['NOMBRE','CREACION','USUARIOMODIFICACION','ESTADO','created_at','updated_at'];
   
 }

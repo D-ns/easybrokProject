@@ -21,13 +21,11 @@ Route::get('cotizaciones', 'WelcomeController@cotizaciones');
 //Route::get('crear','CargosController@create');
 //Route::post('guardar','CargosController@store');
 //Route::get('listar','CargosController@lista');
-
 //Route::get('{id}/edit','CargosController@edit');
 
 Route::resource('cargos','CargosController');
 Route::get('cargos/view/{id}','CargosController@view');
 Route::get('cargos/edit/{id}','CargosController@edit');
-
 Route::resource('concesionario','ConcesionarioController');
 Route::get('concesionario/{id}/view','ConcesionarioController@view');
 

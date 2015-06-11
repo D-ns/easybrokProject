@@ -24,8 +24,8 @@ class CargosController extends Controller {
 	 */
 	public function create()
 	{
-	    
-            return view('cargo.crear');
+	    $mensaje=null;
+            return view('cargo.crear')->with('mensajes',$mensaje);
             
           
             
@@ -50,7 +50,7 @@ class CargosController extends Controller {
           $input= Request::all();
          
           Tmp_cargo::create($input);
-          return view('cargo.index')->with('mensajes',$mensaje); 
+          return view('cargo.crear')->with('mensajes',$mensaje); 
           
           
           
@@ -125,7 +125,7 @@ class CargosController extends Controller {
         
         
         
-         public function update($id,Requests\CreateCargoRequest $request){
+       public function update($id,Requests\CreateCargoRequest $request){
         
         $cargo= Tmp_cargo::find($id);
         $cargo->update($request->all());
@@ -133,10 +133,7 @@ class CargosController extends Controller {
         return view('cargo.index')->with('mensajes',$mensaje);
         
           }
-        
-        
-
-	/**
+        /**
 	 * Remove the specified resource from storage.
 	 *
 	 * @param  int  $id
@@ -144,13 +141,12 @@ class CargosController extends Controller {
 	 */
 	public function destroy($id)
 	{
-           $cargo=Tmp_cargo::find($id);
-           $cargo->delete();
-           $mensaje='Eliminado Correctamente';
-           return view('cargo.index')->with('mensajes',$mensaje);
-            
-	}
-
-    
+           $cargos=Tmp_cargo::find($id);
+           $cargos->delete();
+           $cargos= Tmp_cargo::all(); //tiene que ir deley esto para que se pueda listar aqui se selecciona los datos de la tabla
+           return view('cargo.listar',compact('cargos'));
+          // $mensaje='Eliminado Correctamente';
+          // return view('cargo.listar')->with('mensajes',$mensaje);
+       }
 
 }

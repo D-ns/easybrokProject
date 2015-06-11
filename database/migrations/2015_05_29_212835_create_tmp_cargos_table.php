@@ -16,11 +16,11 @@ class CreateTmpCargosTable extends Migration {
 		{
 			$table->integer('id');
                         $table->string('NOMBRE');
-                        $table->string('CREACION');
                         $table->int('USUARIOCREACION');
-                        $table->string('MODIFICACION');
-    			$table->int('USUARIOMODIFICACION');
+                        $table->int('USUARIOMODIFICACION');
         	        $table->string('ESTADO');
+                        $table->integer('created_at');
+                        $table->integer('updated_at');
 		});
 	}
 
