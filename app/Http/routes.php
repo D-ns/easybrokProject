@@ -30,3 +30,8 @@ Route::get('cargos/edit1/{id}','CargosController@edit1');
 Route::resource('concesionario','ConcesionarioController');
 Route::get('concesionario/{id}/view','ConcesionarioController@view');
 
+//Sucursales
+Route::resource('sucursales','SucursalesController');
+Route::get('sucursales/view/{id}','SucursalesController@view');
+Route::get('sucursales/edit/{id}','SucursalesController@edit');
+

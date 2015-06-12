@@ -165,24 +165,19 @@
                                 <li><a href="#"><i class="fa fa-users"></i>Usuarios</a></li>
                                 <li>
                                     <a href="#">Parametrización<span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li><a href="#">País</a></li>
-                                        <li><a href="#">Provincias</a></li>
-                                        <li><a href="#">Ciudades</a></li>
-                                                <li>
-                                                      <a href="{{url('../cargos/show')}}">Cargos<span class="fa arrow"></span></a>
-                                                </li>
-                                        
-                                         <li>
-                                                      <a href="{{url('../concesionario/show')}}">Concesionarios<span class="fa arrow"></span></a>
-                                         </li>
-
-                                            </ul>
-                                        
- </li>
-
-                                      
-                                      </li>
+                                    <ul class="nav nav-third-level">                                        
+                                        <li>
+                                            <a href="{{url('../cargos/show')}}">Cargos<span class="fa arrow"></span></a>
+                                        </li>                                        
+                                        <li>
+                                            <a href="{{url('../concesionario/show')}}">Concesionarios<span class="fa arrow"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="{{url('../sucursales/show')}}">Sucursales<span class="fa arrow"></span></a>
+                                        </li>
+                                    </ul>                                        
+                                </li>
+                            </li>
 
                                     </ul>
                                 </li>
