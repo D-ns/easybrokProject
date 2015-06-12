@@ -12,6 +12,7 @@ class CargosController extends Controller {
 	 *
 	 * @return Response
 	 */
+      
 	public function index()
 	{
 		
@@ -45,20 +46,17 @@ class CargosController extends Controller {
 	 */
 	public function store()
 	{
-          
+         
+          //$valor='Activo';
           $mensaje='Cargo Guardado Correctamente';
           $input= Request::all();
-         
           Tmp_cargo::create($input);
-          return view('cargo.crear')->with('mensajes',$mensaje); 
+          return view('cargo.crear')->with('mensajes',$mensaje);
           
           
-          
-          
-          
-//           $cargo= new Tmp_cargo();
-//           $cargo->NOMBRE=Input::get('NOMBRE');
-//          $validator=  Tmp_cargo::validate(array('NOMBRE'=> Input::get('NOMBRE')));
+//         $cargo= new Tmp_cargo();
+//         $cargo->NOMBRE=Input::get('NOMBRE');
+//         $validator=  Tmp_cargo::validate(array('NOMBRE'=> Input::get('NOMBRE')));
 //          
 //          if($validator->fails){
 //              $error=$validator->messages()->all();
@@ -92,9 +90,6 @@ class CargosController extends Controller {
         }
         
       
-      
-        
-
 	/**
 	 * Show the form for editing the specified resource.
 	 *
@@ -103,10 +98,20 @@ class CargosController extends Controller {
 	 */
 	public function edit($id)
 	{
+        $camb=0;
         $cargo= Tmp_cargo::find($id);
-        return view ('cargo.edit', compact('cargo'));
+        return view ('cargo.edit', compact('cargo'))->with('camb',$camb);
          
         }
+        
+        public function edit1($id)
+	{
+        $cargo= Tmp_cargo::find($id);
+        $camb=1;
+        return view ('cargo.edit', compact('cargo'))->with('camb',$camb);
+         
+        }
+        
         
         public function view($id)
 	{
@@ -122,15 +127,13 @@ class CargosController extends Controller {
 	 * @return Response
 	 */
 	
-        
-        
-        
        public function update($id,Requests\CreateCargoRequest $request){
         
-        $cargo= Tmp_cargo::find($id);
-        $cargo->update($request->all());
-        $mensaje='Guardado Correctamente';
-        return view('cargo.index')->with('mensajes',$mensaje);
+        $cargos= Tmp_cargo::find($id);
+        $cargos->update($request->all());
+        $cargos=Tmp_cargo::all();
+        //$mensaje='Correcto';
+        return view('cargo.listar', compact('cargos'));
         
           }
         /**
@@ -141,12 +144,25 @@ class CargosController extends Controller {
 	 */
 	public function destroy($id)
 	{
-           $cargos=Tmp_cargo::find($id);
-           $cargos->delete();
-           $cargos= Tmp_cargo::all(); //tiene que ir deley esto para que se pueda listar aqui se selecciona los datos de la tabla
-           return view('cargo.listar',compact('cargos'));
+            $cargos=Tmp_cargo::find($id);
+            $cargos= Tmp_cargo::all(); //tiene que ir deley esto para que se pueda listar aqui se selecciona los datos de la tabla
+            return view('cargo.listar',compact('cargos'));
+           
           // $mensaje='Eliminado Correctamente';
           // return view('cargo.listar')->with('mensajes',$mensaje);
        }
+       
+//        public function update1($id){
+//        
+//        $cargo= Tmp_cargo::find($id);
+//        $cargo= new Tmp_cargo();
+//        $cargo->ESTADO='P';
+//        $cargo->update();
+//        $mensaje='Cambio Estado';
+//        return view('cargo.index')->with('mensajes',$mensaje);
+//       
+//        
+//       }
+       
 
 }

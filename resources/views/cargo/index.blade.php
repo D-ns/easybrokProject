@@ -1,4 +1,4 @@
-@extends('templates.admincargo_tpl')
+@extends('templates.admin_tpl')
 @section('content')
 <?php echo $mensajes; ?>
 

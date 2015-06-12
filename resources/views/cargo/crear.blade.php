@@ -1,14 +1,18 @@
-@extends('templates.admincargo_tpl')
+@extends('templates.admin_tpl')
 @section('content')
 
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
+
+            <div class="glyphicon glyphicon-hand-right " style=" background: #ffffff">{!!$mensajes!!} </div>
+
+            <br>
+            <br>
             <div class="panel panel-default">
 
-                <?php echo $mensajes; ?>
-                
                 {!!Form ::open(['url'=>'cargos'])!!} <!-- open recibe la la URL donde se pone donde la petición -->
+
 
                 <!--<div class="form-group">
                 
@@ -29,23 +33,25 @@
                     {!! Form:: label('usuario','Uusario Creador:')!!}
                     {!! Form:: text('USUARIOCREACION',null,['class'=>'form-control'])!!}
                 </div>-->
-                <!--<div class="form-group">
-                    {!! Form:: label('estado','Estado Cargo:')!!}
-                    {!! Form:: text('ESTADO',null,['class'=>'form-control'])!!}
-                </div>-->
                 <div class="form-group">
-                    {!! Form:: submit('guardar')!!}
+                    <!--{!! Form:: label('estado','Estado Cargo:')!!}-->
+
+                    <a class="sr-only" href="#contenido">
+                        {!! Form:: text('ESTADO','Activo')!!}
+                    </a>
                 </div>
-                <div class="form-group">
-                    {!!link_to('cargos/index','Cancelar')!!}    
-
-
-                </div >
+                <div class="glyphicon  glyphicon-floppy-disk">
+                    {!! Form:: submit('Guardar') !!}
+                </div>
+                 <br>
+                <br>
                 {!! Form:: close()!!}
-
-
             </div>
         </div>
+        <div class="form-group">
+
+            <a href="{{url('cargos/index')}}" class="glyphicon glyphicon-remove" >Cancelar</a>
+        </div >
     </div>
 </div>
 

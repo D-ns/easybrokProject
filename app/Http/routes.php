@@ -26,6 +26,7 @@ Route::get('cotizaciones', 'WelcomeController@cotizaciones');
 Route::resource('cargos','CargosController');
 Route::get('cargos/view/{id}','CargosController@view');
 Route::get('cargos/edit/{id}','CargosController@edit');
+Route::get('cargos/edit1/{id}','CargosController@edit1');
 Route::resource('concesionario','ConcesionarioController');
 Route::get('concesionario/{id}/view','ConcesionarioController@view');
 

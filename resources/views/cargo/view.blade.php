@@ -1,4 +1,4 @@
-@extends('templates.admincargo_tpl')
+@extends('templates.admin_tpl')
 @section('content')
 <div class="container">
     <div class="row">
@@ -12,7 +12,6 @@
                                             {!! Form:: label('id','ID:')!!}
                                             {!! Form:: text('usuario',null,['class'=>'form-control'])!!}
                                         </div>-->
-
 
                 <div class="form-group">
                     {!! Form:: label('nombre','Nombre:')!!}
@@ -35,7 +34,11 @@
 
                 {!! Form:: close()!!}
                 </div>
+             
         </div>
+        <div class="form-group">
+                    <a href="{{url('cargos/index')}}" class="glyphicon glyphicon-hand-left" >Regresar</a> 
+        </div >
     </div>
 </div>
 @endsection

@@ -19,6 +19,15 @@
         <!--CUSTOM STYLES-->
         <link href="../assets/css/style.css" rel="stylesheet" />
         
+
+
+        <!-- Para Modificar -->
+
+        <link href="../../assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+        <link href="../../assets/css/style.css" rel="stylesheet" />
+        
+        
         
         
         <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -140,7 +149,7 @@
                     <ul class="nav" id="main-menu">
                         <li>
                             <div class="user-img-div">
-                                <img src="{{url('../assets/img/user.jpg')}}" class="img-circle" />
+                                <img src="{{url('assets/img/user.jpg')}}" class="img-circle" />
                             </div>
                         </li>
                         <li><a  href="#"> <strong> Citytech  </strong></a></li>
